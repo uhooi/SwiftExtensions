@@ -13,7 +13,7 @@ public extension UIImage {
     
     // MARK: Public Methods
     
-    /// イメージ→PNGデータへ変換する
+    /// イメージ→PNGデータに変換する
     ///
     /// - Returns: 変換後のPNGデータ
     public func toPNGData() -> Data {
@@ -25,7 +25,7 @@ public extension UIImage {
         return data
     }
     
-    /// イメージ→JPEGデータへ変換する
+    /// イメージ→JPEGデータに変換する
     ///
     /// - Returns: 変換後のJPEGデータ
     public func toJPEGData() -> Data {
