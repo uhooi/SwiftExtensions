@@ -1,0 +1,22 @@
+# 無効にするルール
+disabled_rules:
+  - trailing_whitespace
+
+# デフォルト無効で有効にするルール
+opt_in_rules:
+  - conditional_returns_on_newline
+  - force_unwrapping
+  - empty_count
+#  - missing_docs
+  - operator_usage_whitespace
+
+# 対象のファイル・フォルダ
+# デフォルトからフォルダ名を変更していない場合、プロジェクト名と同名のフォルダを指定すればいい
+included:
+  - SwiftExtensions
+
+# 対象外のファイル・フォルダ
+# CocoaPodsでインストールしたライブラリは対象外とする
+excluded:
+  - Pods
+
