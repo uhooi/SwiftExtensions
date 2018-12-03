@@ -44,12 +44,12 @@ public extension String {
     // MARK: Private Methods
     
     private func transform(transform: StringTransform, reverse: Bool) -> String {
-        if let string = self.applyingTransform(transform, reverse: reverse) {
-            return string
-        } else {
+        guard let string = self.applyingTransform(transform, reverse: reverse) else {
             print("文字列を変換できませんでした。")
             return ""
         }
+
+        return string
     }
     
 }
