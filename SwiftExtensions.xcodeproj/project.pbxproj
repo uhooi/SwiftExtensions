@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C02541021C3DECA00787FC7 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C02540F21C3DECA00787FC7 /* String+Date.swift */; };
 		2C3BF43721B299A50037050F /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF43621B299A50037050F /* UIView+Border.swift */; };
 		2C3BF43921B29AC80037050F /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF43821B29AC80037050F /* UIView+Image.swift */; };
 		2C3BF43D21B29CDE0037050F /* Data+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF43C21B29CDE0037050F /* Data+Image.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C02540F21C3DECA00787FC7 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		2C3BF43621B299A50037050F /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		2C3BF43821B29AC80037050F /* UIView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
 		2C3BF43C21B29CDE0037050F /* Data+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Image.swift"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				2C3BF43C21B29CDE0037050F /* Data+Image.swift */,
 				2C3BF43E21B29D9F0037050F /* Date+String.swift */,
+				2C02540F21C3DECA00787FC7 /* String+Date.swift */,
 				2C3BF44021B29E310037050F /* String+Transform.swift */,
 				2C3BF43621B299A50037050F /* UIView+Border.swift */,
 				2C3BF43821B29AC80037050F /* UIView+Image.swift */,
@@ -262,6 +265,7 @@
 				2C7DDD7621B28C6600DE7134 /* ViewController.swift in Sources */,
 				2C7DDD7421B28C6600DE7134 /* AppDelegate.swift in Sources */,
 				2C3BF43721B299A50037050F /* UIView+Border.swift in Sources */,
+				2C02541021C3DECA00787FC7 /* String+Date.swift in Sources */,
 				2C3BF44321B2B3180037050F /* UIImage+Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

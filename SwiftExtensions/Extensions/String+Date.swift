@@ -1,27 +1,31 @@
 //
-//  Date+String.swift
+//  String+Date.swift
 //  SwiftExtensions
 //
-//  Created by uhooi on 2018/12/01.
+//  Created by uhooi on 2018/12/14.
 //  Copyright © 2018 THE Uhooi. All rights reserved.
 //
 
 import Foundation
 
-/// Date拡張(文字列)
-public extension Date {
+/// String拡張(日付)
+public extension String {
     
     // MARK: Public Methods
     
-    /// 日付→文字列に変換する
+    /// 文字列→日付に変換する
     ///
     /// - Parameter format: フォーマット
-    /// - Returns: 変換後の文字列
-    public func toString(format: String) -> String {
+    /// - Returns: 変換後の日付
+    public func toDate(format: String) -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format, options: 0,
                                                         locale: Locale(identifier: "ja_JP"))
-        return formatter.string(from: self)
+        guard let date = formatter.date(from: self) else {
+            return Date()
+        }
+        
+        return date
     }
     
 }
