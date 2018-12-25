@@ -22,124 +22,124 @@ class StringTransformTests: XCTestCase {
     
     // MARK: - Test Methods
     
-    // MARK: hiraganaToKatakana
+    // MARK: toKatakana
     
-    func testHiraganaToKatakanaAll() {
-        checkHiraganaToKatakana(before: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゐゆゑよわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉっゃゅょゎ",
-                                after: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤヰユヱヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョヮ")
+    func testToKatakanaAll() {
+        checkToKatakana(before: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゐゆゑよわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉっゃゅょゎ",
+                        after: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤヰユヱヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョヮ")
     }
     
     // 副作用で半角ｶﾅが全角カナに変換される
-    func testHiraganaToKatakanaHalfwidthKatakanaAll() {
-        checkHiraganaToKatakana(before: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ",
-                                after: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョ")
+    func testToKatakanaHalfwidthKatakanaAll() {
+        checkToKatakana(before: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ",
+                        after: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョ")
     }
     
-    func testHiraganaToKatakanaScramble() {
-        checkHiraganaToKatakana(before: "aあ1い★う$え漢字おカタカナ１ｱＡ",
-                                after: "aア1イ★ウ$エ漢字オカタカナ１アＡ")
+    func testToKatakanaScramble() {
+        checkToKatakana(before: "aあ1い★う$え漢字おカタカナ１ｱＡ",
+                        after: "aア1イ★ウ$エ漢字オカタカナ１アＡ")
     }
     
-    func testHiraganaToKatakanaEmpty() {
-        checkHiraganaToKatakana(before: "",
-                                after: "")
+    func testToKatakanaEmpty() {
+        checkToKatakana(before: "",
+                        after: "")
     }
     
-    // MARK: katakanaToHiragana
+    // MARK: toHiragana
     
-    func testKatakanaToHiraganaFullwidthAll() {
-        checkKatakanaToHiragana(before: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤヰユヱヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョヮヵヶ",
-                                after: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゐゆゑよわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉっゃゅょゎかけ")
+    func testToHiraganaFullwidthAll() {
+        checkToHiragana(before: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤヰユヱヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョヮヵヶ",
+                        after: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゐゆゑよわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉっゃゅょゎかけ")
     }
     
-    func testKatakanaToHiraganaHalfwidthAll() {
-        checkKatakanaToHiragana(before: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ",
-                                after: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉっゃゅょ")
+    func testToHiraganaHalfwidthAll() {
+        checkToHiragana(before: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ",
+                        after: "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉっゃゅょ")
     }
     
-    func testKatakanaToHiraganaScramble() {
-        checkKatakanaToHiragana(before: "aア1イ★ウ$エ漢字オひらがな１ｱＡ",
-                                after: "aあ1い★う$え漢字おひらがな１あＡ")
+    func testToHiraganaScramble() {
+        checkToHiragana(before: "aア1イ★ウ$エ漢字オひらがな１ｱＡ",
+                        after: "aあ1い★う$え漢字おひらがな１あＡ")
     }
     
-    func testKatakanaToHiraganaEmpty() {
-        checkKatakanaToHiragana(before: "",
-                                after: "")
+    func testToHiraganaEmpty() {
+        checkToHiragana(before: "",
+                        after: "")
     }
     
-    // MARK: halfwidthToFullwidth
+    // MARK: toFullwidth
     
-    func testHalfwidthToFullwidthKatakana() {
-        checkHalfwidthToFullwidth(before: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ",
-                                  after: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョ")
+    func testToFullwidthKatakana() {
+        checkToFullwidth(before: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ",
+                         after: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョ")
     }
     
-    func testHalfwidthToFullwidthAlphabet() {
-        checkHalfwidthToFullwidth(before: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                                  after: "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ")
+    func testToFullwidthAlphabet() {
+        checkToFullwidth(before: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                         after: "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ")
     }
     
-    func testHalfwidthToFullwidthNumber() {
-        checkHalfwidthToFullwidth(before: "1234567890",
-                                  after: "１２３４５６７８９０")
+    func testToFullwidthNumber() {
+        checkToFullwidth(before: "1234567890",
+                         after: "１２３４５６７８９０")
     }
     
-    // TODO: testHalfwidthToFullwidthSymbol()
+    // TODO: testToFullwidthSymbol()
     
-    func testHalfwidthToFullwidthScramble() {
-        checkHalfwidthToFullwidth(before: "aア1イ★ウ$エ漢字オひらがな１ｱＡ",
-                                  after: "ａア１イ★ウ＄エ漢字オひらがな１アＡ")
+    func testToFullwidthScramble() {
+        checkToFullwidth(before: "aア1イ★ウ$エ漢字オひらがな１ｱＡ",
+                         after: "ａア１イ★ウ＄エ漢字オひらがな１アＡ")
     }
     
-    func testHalfwidthToFullwidthEmpty() {
-        checkHalfwidthToFullwidth(before: "",
-                                  after: "")
+    func testToFullwidthEmpty() {
+        checkToFullwidth(before: "",
+                         after: "")
     }
     
-    // MARK: fullwidthToHalfwidth
+    // MARK: toHalfwidth
     
-    func testfullwidthToHalfwidthKatakana() {
-        checkFullwidthToHalfwidth(before: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョ",
-                                  after: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ")
+    func testToHalfwidthKatakana() {
+        checkToHalfwidth(before: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォッャュョ",
+                         after: "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾜｦﾝｶﾞｷﾞｸﾞｹﾞｺﾞｻﾞｼﾞｽﾞｾﾞｿﾞﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟｳﾞｧｨｩｪｫｯｬｭｮ")
     }
     
-    func testfullwidthToHalfwidthAlphabet() {
-        checkFullwidthToHalfwidth(before: "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
-                                  after: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    func testToHalfwidthAlphabet() {
+        checkToHalfwidth(before: "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ",
+                         after: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
     }
     
-    func testfullwidthToHalfwidthNumber() {
-        checkFullwidthToHalfwidth(before: "１２３４５６７８９０",
-                                  after: "1234567890")
+    func testToHalfwidthNumber() {
+        checkToHalfwidth(before: "１２３４５６７８９０",
+                         after: "1234567890")
     }
     
-    // TODO: testFullwidthToHalfwidthSymbol()
+    // TODO: testToHalfwidthSymbol()
     
-    func testFullwidthToHalfwidthScramble() {
-        checkFullwidthToHalfwidth(before: "aア1イ★ウ$エ漢字オひらがな１ｱＡ",
-                                  after: "aｱ1ｲ★ｳ$ｴ漢字ｵひらがな1ｱA")
+    func testToHalfwidthScramble() {
+        checkToHalfwidth(before: "aア1イ★ウ$エ漢字オひらがな１ｱＡ",
+                         after: "aｱ1ｲ★ｳ$ｴ漢字ｵひらがな1ｱA")
     }
     
-    func testFullwidthToHalfwidthEmpty() {
-        checkFullwidthToHalfwidth(before: "",
-                                  after: "")
+    func testToHalfwidthEmpty() {
+        checkToHalfwidth(before: "",
+                         after: "")
     }
     
     // MARK: - Private Methods
     
-    private func checkHiraganaToKatakana(before: String, after: String) {
-        XCTAssertEqual(before.hiraganaToKatakana(), after)
+    private func checkToKatakana(before: String, after: String) {
+        XCTAssertEqual(before.toKatakana(), after)
     }
     
-    private func checkKatakanaToHiragana(before: String, after: String) {
-        XCTAssertEqual(before.katakanaToHiragana(), after)
+    private func checkToHiragana(before: String, after: String) {
+        XCTAssertEqual(before.toHiragana(), after)
     }
     
-    private func checkHalfwidthToFullwidth(before: String, after: String) {
-        XCTAssertEqual(before.halfwidthToFullwidth(), after)
+    private func checkToFullwidth(before: String, after: String) {
+        XCTAssertEqual(before.toFullwidth(), after)
     }
     
-    private func checkFullwidthToHalfwidth(before: String, after: String) {
-        XCTAssertEqual(before.fullwidthToHalfwidth(), after)
+    private func checkToHalfwidth(before: String, after: String) {
+        XCTAssertEqual(before.toHalfwidth(), after)
     }
 }

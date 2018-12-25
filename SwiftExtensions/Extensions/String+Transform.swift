@@ -16,28 +16,28 @@ public extension String {
     /// ひらがな→カタカナに変換する
     ///
     /// - Returns: 変換後の文字列(変換に失敗した場合は空を返す)
-    public func hiraganaToKatakana() -> String {
+    public func toKatakana() -> String {
         return transform(transform: .hiraganaToKatakana, reverse: false)
     }
     
     /// カタカナ→ひらがなに変換する
     ///
     /// - Returns: 変換後の文字列(変換に失敗した場合は空を返す)
-    public func katakanaToHiragana() -> String {
+    public func toHiragana() -> String {
         return transform(transform: .hiraganaToKatakana, reverse: true)
     }
     
     /// 全角→半角に変換する
     ///
     /// - Returns: 変換後の文字列(変換に失敗した場合は空を返す)
-    public func fullwidthToHalfwidth() -> String {
+    public func toHalfwidth() -> String {
         return transform(transform: .fullwidthToHalfwidth, reverse: false)
     }
     
     /// 半角→全角に変換する
     ///
     /// - Returns: 変換後の文字列(変換に失敗した場合は空を返す)
-    public func halfwidthToFullwidth() -> String {
+    public func toFullwidth() -> String {
         return transform(transform: .fullwidthToHalfwidth, reverse: true)
     }
     
